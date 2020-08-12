@@ -7,7 +7,7 @@ steps:
   args: ["push", "gcr.io/$PROJECT_ID/gke-react:${_INCREMENT_1}"]
 
 substitutions:
-    _INCREMENT_1: 1.0 # default value
+    _INCREMENT_1: '(docker images | awk '($1 == "gcr.io/$PROJECT_ID/gke-react") {print $2 += .01; exit}')' # default value
 #- name: 'gcr.io/cloud-builders/kubectl'
 #  args:
 #  - 'apply'
