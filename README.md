@@ -1,2 +1,2 @@
-xx# gcloud-react
+x# gcloud-react
 .
