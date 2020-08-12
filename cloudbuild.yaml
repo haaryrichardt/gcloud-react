@@ -6,7 +6,7 @@ steps:
 - name: "gcr.io/cloud-builders/docker"
   args: ["push", "gcr.io/$PROJECT_ID/gke-react:$SHORT_SHA"]
 
-#substitutions:
+#substitutions::
 #    _INCREMENT_1: $TAG_NAME # default value
 #- name: 'gcr.io/cloud-builders/kubectl'
 #  args:
