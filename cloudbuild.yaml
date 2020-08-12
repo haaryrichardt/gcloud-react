@@ -1,10 +1,10 @@
 steps:
 # build the container images
 - name: "gcr.io/cloud-builders/docker"
-  args: ["build", "-t", "gcr.io/$PROJECT_ID/gke-react:$(docker images | awk '($1 == "your/project") {print $2 += .01; exit}')", "./app/"]
+  args: ["build", "-t", "gcr.io/$PROJECT_ID/gke-react:${INCREMENT}", "./app/"]
   # push the container image to gcloud registry
 - name: "gcr.io/cloud-builders/docker"
-  args: ["push", "gcr.io/$PROJECT_ID/gke-react:$(docker images | awk '($1 == "gcr.io/trainingmodule-285008/gke-react") {print $2 += .01; exit}')"]
+  args: ["push", "gcr.io/$PROJECT_ID/gke-react:${INCREMENT}"]
 
 #- name: 'gcr.io/cloud-builders/kubectl'
 #  args:
