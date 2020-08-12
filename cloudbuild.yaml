@@ -7,7 +7,7 @@ steps:
   args: ["push", "gcr.io/$PROJECT_ID/gke-react:${INCREMENT}"]
 
 substitutions:
-    _INCREMENT_1: v6.9.1 # default value
+    _INCREMENT_1: "v6.9.1" # default value
 #- name: 'gcr.io/cloud-builders/kubectl'
 #  args:
 #  - 'apply'
