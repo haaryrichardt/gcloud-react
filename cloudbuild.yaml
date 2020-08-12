@@ -6,8 +6,6 @@ steps:
 - name: "gcr.io/cloud-builders/docker"
   args: ["push", "gcr.io/$PROJECT_ID/gke-react:$(git rev-parse --short HEAD)"]
 
-substitutions:
-    _INCREMENT_1: v:1.0.0 # default value
 #- name: 'gcr.io/cloud-builders/kubectl'
 #  args:
 #  - 'apply'
