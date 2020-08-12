@@ -4,10 +4,10 @@ steps:
   args: ["build", "-t", "gcr.io/$PROJECT_ID/gke-react:${_INCREMENT_1}", "./app/"]
   # push the container image to gcloud registry
 - name: "gcr.io/cloud-builders/docker"
-  args: ["push", "gcr.io/$PROJECT_ID/gke-react:${INCREMENT}"]
+  args: ["push", "gcr.io/$PROJECT_ID/gke-react:${_INCREMENT_1}"]
 
 substitutions:
-    _INCREMENT_1: "v6.9.1" # default value
+    _INCREMENT_1: v6.9.1 # default value
 #- name: 'gcr.io/cloud-builders/kubectl'
 #  args:
 #  - 'apply'
