@@ -4,8 +4,7 @@ steps:
   args: ["build", "-t", "gcr.io/$PROJECT_ID/gke-react:$_PR_NUMBER", "./app/"]
   # push the container image to gcloud registry
 - name: "gcr.io/cloud-builders/docker"
-  args: ["push", "gcr.io/$PROJECT_ID/gke-react:$_PR_NUMBER
-"]
+  args: ["push", "gcr.io/$PROJECT_ID/gke-react:$_PR_NUMBER"]
 
 #substitutions:
 #    _INCREMENT_1: $TAG_NAME # default value
